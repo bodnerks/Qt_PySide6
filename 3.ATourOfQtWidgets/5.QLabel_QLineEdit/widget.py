@@ -8,13 +8,13 @@ class Widget(QWidget):
 
         #A set of signals we can connect to
         label = QLabel("Fullname : ")
-        self.line_edit = QLineEdit()
+        self.line_edit = QLineEdit() # make member of class in order to access in fxns
         #self.line_edit.textChanged.connect(self.text_changed)
-        #self.line_edit.cursorPositionChanged.connect(self.cursor_position_changed)
+        self.line_edit.cursorPositionChanged.connect(self.cursor_position_changed)
         #self.line_edit.editingFinished.connect(self.editing_finished)
         self.line_edit.returnPressed.connect(self.return_pressed)
         #self.line_edit.selectionChanged.connect(self.selection_changed)
-        self.line_edit.textEdited.connect(self.text_edited)
+        #self.line_edit.textEdited.connect(self.text_edited)
 
 
 
@@ -48,12 +48,15 @@ class Widget(QWidget):
     def cursor_position_changed(self,old,new):
         print("cursor old position : ",old," -new position : ",new)
 
+    # triggered when user hits enter on line edit 
     def editing_finished(self) : 
         print("Editing finished")
 
+    # same as previous -- what's the difference?
     def return_pressed(self):
         print("Return pressed")
 
+    # noitified of current selection
     def selection_changed(self):
         print("Selection Changed : ",self.line_edit.selectedText())
 

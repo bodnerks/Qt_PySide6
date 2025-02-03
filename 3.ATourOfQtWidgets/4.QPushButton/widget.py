@@ -7,6 +7,7 @@ class Widget(QWidget):
         self.setWindowTitle("Custom MainWindow")
 
         button = QPushButton("Click")
+        # different signals
         button.clicked.connect(self.button_clicked)
         button.pressed.connect(self.button_pressed)
         button.released.connect(self.button_released)
@@ -16,6 +17,7 @@ class Widget(QWidget):
 
         self.setLayout(layout)
 
+    # implementation of slots
     def button_clicked(self):
         print("Clicked")
     def button_pressed(self): 

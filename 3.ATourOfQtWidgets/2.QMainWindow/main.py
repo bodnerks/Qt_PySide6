@@ -7,4 +7,4 @@ app = QApplication(sys.argv)
 window = MainWindow(app)
 window.show()
 
-app.exec()
+app.exec() # start event loop

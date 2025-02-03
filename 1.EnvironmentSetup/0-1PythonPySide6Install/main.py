@@ -1,6 +1,6 @@
 from PySide6.QtWidgets import QApplication, QWidget
 
-import sys
+import sys # for command line options
 
 app = QApplication(sys.argv)
 

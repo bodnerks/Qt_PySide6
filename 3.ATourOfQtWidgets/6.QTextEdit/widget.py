@@ -7,6 +7,7 @@ class Widget(QWidget):
 
         self.setWindowTitle("QTextEdit Demo")
 
+        # make member of class to access in methods
         self.text_edit = QTextEdit()
         #self.text_edit.textChanged.connect(self.text_changed)
 
@@ -16,13 +17,14 @@ class Widget(QWidget):
         current_text_button.clicked.connect(self.current_text_button_clicked)
 
         copy_button = QPushButton("Copy")
+        # use text edit built-in slot
         copy_button.clicked.connect(self.text_edit.copy) #Connect directly to QTextEdit slot
 
         cut_button = QPushButton("Cut")
         cut_button.clicked.connect(self.text_edit.cut)
 
         paste_button = QPushButton("Paste")
-        paste_button.clicked.connect(self.paste) #Go through a custom slot
+        paste_button.clicked.connect(self.paste) #Go through a custom slot, but could use built-in slot here
 
         undo_button = QPushButton("Undo")
         undo_button.clicked.connect(self.text_edit.undo)
