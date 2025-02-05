@@ -1,4 +1,3 @@
-from tkinter import Label
 from PySide6.QtWidgets import QWidget,  QLabel, QHBoxLayout, QVBoxLayout, QSizePolicy, QLineEdit, QPushButton
 
 
@@ -13,7 +12,7 @@ class Widget(QWidget):
         line_edit = QLineEdit()
 
         line_edit.setSizePolicy(QSizePolicy.Expanding,QSizePolicy.Fixed)
-        label.setSizePolicy(QSizePolicy.Expanding,QSizePolicy.Fixed)
+        label.setSizePolicy(QSizePolicy.Fixed,QSizePolicy.Fixed)
 
         h_layout_1 = QHBoxLayout()
         h_layout_1.addWidget(label)
