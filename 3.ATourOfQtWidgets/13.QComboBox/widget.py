@@ -14,6 +14,7 @@ class Widget(QWidget):
         self.combo_box.addItem("Mars")
         self.combo_box.addItem("Pluton")
         self.combo_box.addItem("Saturn")
+        self.combo_box.addItems( [ "Uranus", "Jupiter", "Neptune", "Mercury" ] )
 
         button_current_value = QPushButton("Current Value")
         button_current_value.clicked.connect(self.current_value)

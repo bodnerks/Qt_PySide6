@@ -6,7 +6,7 @@ loader = QUiLoader()
 class UserInterface(QtCore.QObject): #An object wrapping around our ui
     def __init__(self):
         super().__init__()
-        self.ui = loader.load("widget.ui", None)
+        self.ui = loader.load("4.QtDesigner/5.QDesigner_QUiLoader_V2/widget.ui", None) # loading still happening at runtime
         self.ui.setWindowTitle("User Data")
         self.ui.submit_button.clicked.connect(self.do_something)
     def show(self):
