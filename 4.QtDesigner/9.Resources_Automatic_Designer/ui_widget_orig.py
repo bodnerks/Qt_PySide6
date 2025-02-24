@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'widget.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.8.1
+## Created by: Qt User Interface Compiler version 6.3.2
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -23,13 +23,13 @@ class Ui_Widget(object):
     def setupUi(self, Widget):
         if not Widget.objectName():
             Widget.setObjectName(u"Widget")
-        Widget.resize(467, 44)
+        Widget.resize(467, 42)
         self.horizontalLayout = QHBoxLayout(Widget)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.minus_button = QPushButton(Widget)
         self.minus_button.setObjectName(u"minus_button")
         icon = QIcon()
-        icon.addFile(u":/images/minus.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon.addFile(u":/images/minus.png", QSize(), QIcon.Normal, QIcon.Off)
         self.minus_button.setIcon(icon)
 
         self.horizontalLayout.addWidget(self.minus_button)
@@ -42,7 +42,7 @@ class Ui_Widget(object):
         self.plus_button = QPushButton(Widget)
         self.plus_button.setObjectName(u"plus_button")
         icon1 = QIcon()
-        icon1.addFile(u":/images/plus.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon1.addFile(u":/images/plus.png", QSize(), QIcon.Normal, QIcon.Off)
         self.plus_button.setIcon(icon1)
 
         self.horizontalLayout.addWidget(self.plus_button)

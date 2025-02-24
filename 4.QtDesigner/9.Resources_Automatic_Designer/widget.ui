@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>467</width>
-    <height>42</height>
+    <height>44</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,7 +20,7 @@
       <string>Minus</string>
      </property>
      <property name="icon">
-      <iconset resource="resource.qrc">
+      <iconset resource="../8.Resources_Manual_QtCreator/resource.qrc">
        <normaloff>:/images/minus.png</normaloff>:/images/minus.png</iconset>
      </property>
     </widget>
@@ -34,7 +34,7 @@
       <string>Plus</string>
      </property>
      <property name="icon">
-      <iconset resource="resource.qrc">
+      <iconset resource="../8.Resources_Manual_QtCreator/resource.qrc">
        <normaloff>:/images/plus.png</normaloff>:/images/plus.png</iconset>
      </property>
     </widget>
@@ -42,7 +42,7 @@
   </layout>
  </widget>
  <resources>
-  <include location="resource.qrc"/>
+  <include location="../8.Resources_Manual_QtCreator/resource.qrc"/>
  </resources>
  <connections/>
 </ui>
