@@ -22,7 +22,7 @@ class InfoDialog( QDialog, Ui_infoDialog ):
         if ( not( self.position_line_edit.text() == '' ) ):
             self.position = self.position_line_edit.text()
         self.favorite_os = self.favorite_os_combo_box.currentText()
-        self.accept() # user accepted info
+        self.accept() # user accepted info from dialog
     
     def cancel( self ):
-        self.reject() # rekect dialog
+        self.reject() # reject dialog
