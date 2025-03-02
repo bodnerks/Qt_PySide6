@@ -101,12 +101,13 @@ class Widget(QWidget, Ui_Widget):
 
     def save_color(self,key,color): 
         l_color = QColor(color)
+        # break into components
         red = l_color.red() 
         green =l_color.green() 
         blue = l_color.blue() 
 
-        settings = QSettings("Blikoon1","SettingsDemo")
-        settings.beginGroup("ButtonColor")
+        settings = QSettings("Blikoon1","SettingsDemo") # organization, application
+        settings.beginGroup("ButtonColor") # name for the group
         settings.setValue(key + "r",red)
         settings.setValue(key + "g",green)
         settings.setValue(key + "b",blue)
@@ -114,13 +115,13 @@ class Widget(QWidget, Ui_Widget):
 
 
     def load_color(self, key):
-        settings =QSettings("Blikoon1","SettingsDemo")
+        settings = QSettings("Blikoon1","SettingsDemo")
         settings.beginGroup("ButtonColor")
-        red = settings.value(key+"r")
-        green = settings.value(key+"g")
-        blue = settings.value(key+"b")
+        red = int( settings.value(key+"r") )
+        green = int( settings.value(key+"g") )
+        blue = int( settings.value(key+"b") )
         settings.endGroup()
-        return QColor(red,green,blue)
+        return QColor(red,green,blue) # needs to be int values
 
 
     def set_loaded_color(self,key,index,button): 
@@ -132,7 +133,7 @@ class Widget(QWidget, Ui_Widget):
 
 
     def load_colors_button_clicked(self):
-        self.set_loaded_color("button1",0,self.button_1)
+        self.set_loaded_color("button1",0,self.button_1) # key, color index, button to apply color to
         self.set_loaded_color("button2",1,self.button_2)
         self.set_loaded_color("button3",2,self.button_3)
         self.set_loaded_color("button4",3,self.button_4)
@@ -143,7 +144,7 @@ class Widget(QWidget, Ui_Widget):
         self.set_loaded_color("button9",8,self.button_9)
 
     def save_colors_button_clicked(self):
-        self.save_color("button1",self.color_list[0])
+        self.save_color("button1",self.color_list[0]) # key, color list member
         self.save_color("button2",self.color_list[1])
         self.save_color("button3",self.color_list[2])
         self.save_color("button4",self.color_list[3])
