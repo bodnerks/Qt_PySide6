@@ -9,7 +9,7 @@ class InfoDialog(QDialog, Ui_InfoDialog):
         self.setWindowTitle("Provide your info")
 
         #Set stylesheet on container widget : Infodialog
-        #self.setStyleSheet("QPushButton{color : red ; background-color : white;}")
+        # self.setStyleSheet("QPushButton{color : red ; background-color : white;}")
 
         #Fields
         self.position = ""
