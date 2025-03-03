@@ -30,8 +30,8 @@ class Widget(QWidget, Ui_Widget):
 
     def data_read_finished(self):
         print("Data read finished")
-        if(self.net_reply.error()):
-            print("Some error occured")
+        if( not self.net_reply.error() == self.net_reply.NetworkError.NoError ):
+            print( f"Some error occured: {self.net_reply.error()}" )
         else:
             doc = QJsonDocument.fromJson(self.m_data_buffer)
             array = QJsonArray(doc.array())
